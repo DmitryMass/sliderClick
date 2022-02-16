@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(21, 21, 61);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+.slide {
+  position: relative;
+  border-radius: 30px;
+  margin: 20px;
+  height: 80vh;
+  color: rgb(78, 11, 11);
+  text-shadow: 1px 1px 8px white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.5s ease-in-out;
+}
+.slide h3 {
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+  margin: 0;
+  font-size: 28px;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 5;
+}
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s linear 0.4s;
+}
+
+/*  0.4s  its transition delay */
